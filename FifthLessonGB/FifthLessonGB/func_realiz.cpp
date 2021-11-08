@@ -53,31 +53,21 @@ void filling_array(std::array<int, 8> &my_array)
     std::cout << "\n";
 }
 
-// ДЗ 5 п.4: (Кольцо вычетов)
-void cicle_bias(std::array<int, 10> &my_array, int bias)
+// ДЗ 5 п.4: (Реализация через копию массива)
+void cicle_bias_copy_array(std::array<int, 10> &my_array, int bias)
 {
     std::array<int, 10> copy_array = my_array;
-    const int size_array = static_cast<int>(my_array.size());
-    int index {};
-    if (bias > 0)
+    const int size_array = my_array.size();
+    int index {abs((size_array + bias))};
+
+    for (auto element : copy_array)
     {
-        while (index < size_array)
-        {
-            my_array[(bias + index) % size_array] = copy_array[index];
-            index ++;
-        }
-    }
-    
-    index = 0;
-    if (bias < 0)
-    {
-        while (index < size_array)
-        {
-            my_array[(index + abs((size_array + bias))) % size_array] = copy_array[index];
-            index ++;
-        }
+        my_array[index % size_array] = element;
+        index ++;
     }
 }
+
+
 
 // ДЗ 5 п.5:
 bool check_balance(std::array<int, 10> &my_array)

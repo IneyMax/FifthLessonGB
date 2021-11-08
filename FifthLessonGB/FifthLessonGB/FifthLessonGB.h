@@ -13,8 +13,10 @@ void print_array(const std::array<int, 10> &my_array);
 // ДЗ 5 п.3:
 void filling_array(std::array<int, 8> &my_array);
 
-// ДЗ 5 п.4: (Кольцо вычетов)
-void cicle_bias(std::array<int, 10> &my_array, int bias);
+// ДЗ 5 п.4:
+void cicle_bias_copy_array(std::array<int, 10> &my_array, int bias);
+
+void cicle_bias_list(std::array<int, 10> &my_array, int bias);
 
 // ДЗ 5 п.5:
 bool check_balance(std::array<int, 10> &my_array);

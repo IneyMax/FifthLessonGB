@@ -20,8 +20,8 @@ int main()
     // ДЗ 5 п.4 (Для вывода используется функция print_array из ДЗ 5 п.2): 
     std::array<int, 10> int_array {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     print_array(int_array);
-    int bias {0};
-    cicle_bias(int_array, bias);
+    int bias {-7};
+    cicle_bias_copy_array(int_array, bias);
     print_array(int_array);
     
     // ДЗ 5 п.5:
